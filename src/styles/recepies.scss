@@ -1,0 +1,184 @@
+#recepiesWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-column: 2/3;
+    grid-gap: 1em;
+    padding: 0 2%;
+}
+
+.wrapper-title {
+    grid-row: 1/2;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.inline-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(50% / 3);
+    padding: 0 45px;
+    box-sizing: border-box;
+}
+
+.card-wrapper {
+    min-width: 390px;
+    min-height: 334px;
+}
+
+.recepies-list {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-gap: 2em;
+}
+
+.recepie-card {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    min-width: 390px;
+    min-height: 270px;
+    margin: 0 1em;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-size: 84%;
+}
+
+.recepie-img {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    min-width: 319px;
+    height: 210px;
+    border-radius: 5px;
+    box-shadow:  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: url('../img/food.png') center center no-repeat;
+    background-size: 106%;
+}
+
+.recepie-info {
+    position: absolute;
+    bottom: 0;
+    /* left: 0; */
+    right: 0;
+    width: 100%;
+    height: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1.recepie-name {
+    font-size: 1.2em;
+    font-weight: bold; 
+    color: var(--title-color);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.recepie-calories {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--calories-color);
+}
+
+.recepie-description {
+    font-size: 1.2em;
+    text-align: left;
+    color: var(--description-color);
+}
+
+.grey {    
+    position: absolute;
+    bottom: -16px;
+    right: 0;
+    left: 0px;
+    justify-content: space-between;
+    height: 30%;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--grey-wrapper); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.recepie-time {
+    grid-column: 1/2;
+    justify-self: baseline;
+    color: var(--time-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.recepie-level {
+    grid-column: 2/3;
+    justify-self: end;
+    color: var(--level-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.btn-add {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: var(--add-btn-color); 
+    color: var(--add-btn-text-color);
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 42px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0), 0 10px 10px rgba(0, 0, 0, 0.06);
+    transition: 0.3s all ease-in;
+}
+
+.btn-add:focus {
+    box-shadow: none;
+}
+
+.modal-shadow {
+    background: rgba(162, 162, 162, 0.3215686274509804);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+
+@media screen and (max-width: 500px) {
+
+    .wrapper-title {
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #recepiesWrapper {
+        grid-column: 1/3;
+    }
+
+    .recepies-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*modal style*/

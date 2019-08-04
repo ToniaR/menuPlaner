@@ -1,0 +1,259 @@
+:root {
+    --table-header-bg: var(--accent-color);
+    --table-header-text-color: var(--white);
+    }
+
+  $edit-btn-bg: var(--green);
+  $edit-btn-text: var(--white);
+  
+  
+  h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
+  table {
+    margin: 3em auto;
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+  }
+  table > thead > tr > th, 
+  table > tbody > tr > td , th{
+    padding: 1em;
+  }
+  .red {
+    color: red;
+  }
+  
+  .menuPlan {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 5em calc(100% - 10em) 5em;
+    grid-template-rows: 5em calc(100% - 10em) 5em;
+    row-gap: 3%;
+  }
+  
+  .switch-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;  
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 10em;
+    height: 3em;
+    align-self: self-end;
+    justify-self: flex-end;
+  }
+  
+  h1.title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-self: flex-end;
+    justify-self: flex-start;
+    font-size: 1.5em;
+  }
+
+  // thead.plan-table-header {
+  //   color: var(--table-header-text-color);
+  //   background-color: var(--table-header-bg);  
+  // }
+  
+  tbody.plan-table-body {
+    background-color: var(--table-body-bg);
+  }
+  
+  th.plan-table-row-title {
+    text-orientation: sidewais;
+    background-color: var(--table-row-th-bg);
+  
+  }
+  
+  .meal-block {
+    position: relative;
+    border-radius: 5px;
+    min-width: 50%;
+    max-width: 80%;
+    margin: 0 auto;
+    min-height: 3em;
+    display: flex;
+    padding: 0;
+  }
+  
+  .meal-block--edit {
+    background-color: var(--meal-block-bg);
+  }
+  
+  .meal-block > .remove-btn {
+    position: absolute;
+    right: 2px;
+    top: -13px;
+    width: 1em;
+    height: 1em;
+    color: #596d79;
+    border: none;
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+  }
+  
+  .meal-block > .remove-btn > i {
+    padding:  0;
+  }
+  
+  .meal-block > a {
+    color: #2d4052;
+    text-decoration: none;
+    font-weight: 600;  
+  }
+    
+  
+  .footer-btns-wrapper {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  
+  button{
+    font-size: 125%;
+    font-weight: 500;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 1px 14px 28px rgba(255, 248, 248, 0.39), 0 10px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  button.btn-rectangular {
+    width: 11em;
+    height: 3.5em;
+    border-radius: 15px;
+    line-height: 3.5em;
+  }
+  
+  button.btn-round {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 15px;
+    line-height: 3.5em;
+    border: none;
+    transition: all 0.1s ease-in;
+  }
+  
+  
+  button.btn-round:hover {
+    transform: rotate(45deg);
+  }
+  
+  button.btn-round:hover > i {
+    transform: rotate(-45deg);
+  }
+  
+  button.edit-btn {
+    margin-right: 1em;
+    border: none;
+    background-color: $edit-btn-bg;
+    color: $edit-btn-text;
+  }
+  
+  button.clear-btn {
+    border: none;
+    background-color: var(--clear-btn-bg);
+    color: var(--clear-btn-text-color);
+  }
+  
+  .switch-toggle {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .switch-toggle-title {
+    margin-right: 5%;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  .switch-toggle-item {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+  }
+
+  .switch-toggle-input {
+    // position: absolute;
+    // opacity: 0;
+    // cursor: pointer;
+    // height: 0;
+    // width: 0;
+  }
+  
+  .switch-toggle-checkmark::before {
+    position: absolute;
+    top: 0;
+    display: block;
+    content: '';
+    width: 3em;
+    height: 1.5em;
+    border-radius: 4em;
+    background: #ededed; 
+  }
+  
+  .switch-toggle-checkmark::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 4em;
+    background: var(--green);
+    box-shadow: 1px 14px 28px rgba(255, 248, 248, 0.39), 0 10px 10px rgba(0, 0, 0, 0.08); 
+    transition: left 0.3s ease;
+  }
+
+  .switch-toggle-input:checked ~ .switch-toggle-checkmark {
+    background-color: #2196F3;
+  }
+  
+  .switch-active::after {
+    left: 2em;
+  }
+  
+  .footer-btns-wrapper.right-align {
+    justify-self: flex-start;
+  }
+  
+  .plan-table--day {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0;
+    width: 60%;
+  }
+
+  .plan__btns-wrapper {
+    position: absolute;
+    bottom: 1%;
+    right: 3%;
+    // grid-row: 1/2;
+    // grid-column: 2/3;
+    // justify-self: flex-end;
+    // align-self: center;
+    // margin-right: 6em;
+
+    & > .clear-btn {
+      margin: 2em 1em 2em 0;
+    }
+  }

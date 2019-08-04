@@ -1,0 +1,76 @@
+@import './nav.scss';
+@import './home.scss';
+@import './recepies.scss';
+@import './day.scss';
+@import './week.scss';
+
+
+:root {
+  --green: #8dce84;
+  --light-grey: #f9f9f9;
+  --white: #ffffff;
+  --grey: #c0c0c0;
+  --dark-grey: #3c3c3c;
+  --orange: #e89f01;
+  --rose: #e42bff;
+  --swans-down: #daefee;
+  --gallery: #ededed;
+  --yellow: #f2e52e;
+  --black: #525252;
+
+  --card-bg: var(--white);
+  --title-color: var(--dark-grey);
+  --calories-color: var(--orange);
+  --grey-wrapper: var(--light-grey);
+  --description-color: var(--grey);
+  --time-color: var(--rose);
+  --level-color: var(--green);
+  --add-btn-color: var(--green);
+  --add-btn-text-color: var(--white);
+
+  --body-color: var(--light-grey);
+  --accent-color: var(--green);
+
+  --table-header-bg: var(--accent-color);
+  --table-header-text-color: var(--white);
+  --table-body-bg: var(--white);
+
+  --table-row-th-bg: var(--swans-down);
+  --meal-block-bg: var(--gallery);
+
+
+  --clear-btn-bg: var(--yellow);
+  --clear-btn-text-color: var(--black);
+
+  --logo-color: var(--white);
+
+  --nav-wrapper-bg: var(--white);
+  }
+
+html, body {
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: grid;
+  grid-template-columns: 4em calc(100% - 4em);
+  height: 100vh;
+}
+
+.btn--square {
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+  border: 0;
+  font-size: 1em;
+}
