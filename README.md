@@ -1,10 +1,10 @@
 # menuPlaner
 
-##Dependency installation
+## Dependency installation
 npm install
 
-##Building
+## Building
 npm run build
 
-##Running
+## Running
 npm run dev
