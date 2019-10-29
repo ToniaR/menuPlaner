@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 var app = {
-    apiKey: "AIzaSyDXEWp2b0qMhYJMLYUpC_5Evc-CwpvyBBE",
+    apiKey: "",
     authDomain: "menu-scheduler.firebaseapp.com",
     databaseURL: "https://menu-scheduler.firebaseio.com",
     projectId: "menu-scheduler",
     storageBucket: "menu-scheduler.appspot.com",
-    messagingSenderId: "792365426776"
+    messagingSenderId: ""
 };
 
 const firebaseApp = firebase.initializeApp(app);
